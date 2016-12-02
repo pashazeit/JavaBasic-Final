@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import static CreatAir.AviaPort.all;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class MainGo extends Application implements Bank {
 
@@ -37,7 +38,8 @@ public class MainGo extends Application implements Bank {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/sample.fxml"));
         primaryStage.setTitle("AirPort");
-        primaryStage.setScene(new Scene(root, 500, 600));
+        primaryStage.setScene(new Scene(root, 500, 800));
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
         primaryStage.setResizable(false);
         primaryStage.setOnCloseRequest(event -> {
@@ -49,6 +51,7 @@ public class MainGo extends Application implements Bank {
             }
             event.consume();
         });
+
     }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {

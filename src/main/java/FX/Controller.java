@@ -87,6 +87,7 @@ public class Controller {
 
     // Добавляем в HashMap выбранный самолёт
     public void setMas(int bort_index) throws SQLException {
+
         ResultSet resset = stat.executeQuery("select  * from Airport_MSQ.Jets where id = " + bort_index);
         while (resset.next()) {
             currentjet.clear();
@@ -144,12 +145,13 @@ public class Controller {
         func.getItems().addAll("Заправить", "Слить", "Посадить пассажиров", "Снять пассажиров");
         button.setDisable(true);
         onexml.setDisable(true);
+        func.setDisable(true);
         //добавляем самолеты в ComboBox
-
 
         fill();
         planeid.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
             if ((int) newValue >= 0) {
+                func.setDisable(false);
                 onexml.setDisable(false);
                 bort_index = (int) newValue;
                 String aa = (String) planeid.getValue();
@@ -190,7 +192,7 @@ public class Controller {
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
 
                 funct = (int) newValue;
-                pewpew.setText("Для функции " + funct_name + " \"жмякните Жмяк\"");
+                pewpew.setText("Для функции " + funct_name + " \"нажмите Действо\"");
                 button.setDisable(false);
 
             }
@@ -286,6 +288,7 @@ public class Controller {
                     flyaway.setText("Thanks!");
                     button.setDisable(true);
                     onexml.setDisable(true);
+                    func.setDisable(true);
                     try {
                         stat.executeUpdate("DELETE from Airport_MSQ.Jets WHERE id=" + bort_index);
                     } catch (SQLException e) {
@@ -348,5 +351,10 @@ public class Controller {
                 System.out.println("NEIN!!!");
             }
         });
+
+        Tooltip tool =new Tooltip();
+        tool.setStyle("-fx-font: bold italic 50pt Georgia ");
+        tool.setText("ЖМИ ЖМИ МЖИ!!!!!");
+        button.setTooltip(tool);
     }
 }

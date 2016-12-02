@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AirPlaner>
-  <Geese-swans>
-    <number>819</number>
-    <speed>5013</speed>
-    <range>13571</range>
-    <weight>93189</weight>
-    <fuel>606</fuel>
-    <tank>2391</tank>
-    <passenger>18</passenger>
-    <passenger_seat>106</passenger_seat>
-    <FlyCost>1260</FlyCost>
-  </Geese-swans>
+  <Humpbacked-Horse>
+    <number>65</number>
+    <speed>3487</speed>
+    <range>20846</range>
+    <weight>65238</weight>
+    <fuel>984</fuel>
+    <tank>3028</tank>
+    <passenger>19</passenger>
+    <passenger_seat>357</passenger_seat>
+    <FlyCost>1330</FlyCost>
+  </Humpbacked-Horse>
 </AirPlaner>

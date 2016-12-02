@@ -9,31 +9,31 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="center" hgap="10" prefHeight="618.0" prefWidth="600.0" vgap="10"
-     xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FX.Controller">
+<GridPane alignment="center" hgap="10" prefHeight="800.0" prefWidth="400.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FX.Controller">
 
    <children>
-      <AnchorPane fx:id="exit" prefHeight="619.0" prefWidth="600.0">
+      <AnchorPane fx:id="exit" prefHeight="800.0" prefWidth="500.0" styleClass="background" stylesheets="@DarkTheme.css">
          <children>
-            <Label layoutX="3.0" layoutY="259.0" prefHeight="17.0" prefWidth="118.0" text="Список самолётов" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="259.0" />
-            <Label layoutX="3.0" layoutY="308.0" prefHeight="17.0" prefWidth="133.0" text="инфо" />
-            <TextArea fx:id="info" editable="false" layoutX="10.0" layoutY="325.0" prefHeight="122.0" prefWidth="386.0" promptText="info" />
-            <Label layoutX="11.0" layoutY="457.0" prefHeight="17.0" prefWidth="150.0" text="Что делаем с самолетом" />
-            <ComboBox fx:id="func" layoutX="246.0" layoutY="453.0" prefWidth="150.0" promptText="доступные опции" />
-            <Button fx:id="button" layoutX="16.0" layoutY="567.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="жмяк" />
-            <Label fx:id="pewpew" layoutX="7.0" layoutY="514.0" prefHeight="50.0" prefWidth="386.0" />
-            <ComboBox fx:id="planeid" layoutX="12.0" layoutY="283.0" prefHeight="25.0" prefWidth="386.0" promptText="Доступные самолеты" />
-            <Label layoutX="12.0" layoutY="14.0" prefHeight="17.0" prefWidth="118.0" text="Доступные средства" />
-            <Label fx:id="cash" layoutX="136.0" layoutY="14.0" prefHeight="17.0" prefWidth="248.0" />
-            <Button fx:id="flyaway" layoutX="143.0" layoutY="567.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" text="отправить" />
-            <Label fx:id="fcost" layoutX="12.0" layoutY="42.0" prefHeight="17.0" prefWidth="386.0" />
-          <Button fx:id="out" layoutX="283.0" layoutY="567.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Выход" />
-            <Button fx:id="onexml" layoutX="14.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="пыщ" />
-            <Button fx:id="allxml" disable="true" layoutX="180.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="тыщ" />
-            <Label layoutX="15.0" layoutY="197.0" prefHeight="17.0" prefWidth="150.0" text="выбранный самолет в Xml" />
-            <Label layoutX="187.0" layoutY="193.0" prefHeight="25.0" prefWidth="67.0" text="все в XML" />
-            <Button fx:id="adplan" layoutX="298.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Add" />
-            <Label layoutX="288.0" layoutY="197.0" prefHeight="17.0" prefWidth="110.0" text="добавить самолет" />
+            <Label layoutX="-2.0" layoutY="272.0" prefHeight="21.0" prefWidth="162.0" text="Список самолётов" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="272.0" />
+            <Label layoutX="12.0" layoutY="332.0" prefHeight="31.0" prefWidth="133.0" text="инфо" AnchorPane.leftAnchor="12.0" />
+            <TextArea fx:id="info" editable="false" layoutX="12.0" layoutY="363.0" prefHeight="248.0" prefWidth="386.0" promptText="info" styleClass="textarea-bright" AnchorPane.leftAnchor="12.0" />
+            <Label layoutX="12.0" layoutY="633.0" prefHeight="21.0" prefWidth="204.0" text="Что делаем с самолетом" />
+            <ComboBox fx:id="func" layoutX="217.0" layoutY="631.0" prefHeight="31.0" prefWidth="183.0" promptText="доступные опции" style="-fx-background-color: #1d1d1d; -fx-border-color: #e2e2e2;" styleClass="label-bright" />
+            <Button fx:id="button" layoutX="10.0" layoutY="736.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Действо" AnchorPane.leftAnchor="10.0" />
+            <Label fx:id="pewpew" layoutX="12.0" layoutY="663.0" prefHeight="50.0" prefWidth="386.0" />
+            <ComboBox fx:id="planeid" layoutX="10.0" layoutY="302.0" prefHeight="25.0" prefWidth="386.0" promptText="Доступные самолеты" style="-fx-background-color: #1d1d1d; -fx-border-color: #e2e2e2;" styleClass="label-bright" AnchorPane.leftAnchor="10.0" />
+            <Label layoutX="10.0" layoutY="49.0" prefHeight="62.0" prefWidth="406.0" styleClass="label-bright" stylesheets="@DarkTheme.css" text="Доступные средства" AnchorPane.leftAnchor="10.0" />
+            <Label fx:id="cash" layoutX="12.0" layoutY="100.0" prefHeight="21.0" prefWidth="301.0" />
+            <Button fx:id="flyaway" layoutX="143.0" layoutY="736.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="отправить" />
+            <Label fx:id="fcost" layoutX="10.0" layoutY="121.0" prefHeight="31.0" prefWidth="386.0" styleClass="label-bright" />
+          <Button fx:id="out" layoutX="276.0" layoutY="736.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Выход" />
+            <Button fx:id="onexml" layoutX="10.0" layoutY="151.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="190.0" text="Добавить один" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="151.0" />
+            <Button fx:id="allxml" disable="true" layoutX="10.0" layoutY="194.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="190.0" text="Добавить все" AnchorPane.leftAnchor="10.0" />
+            <Label layoutX="213.0" layoutY="157.0" prefHeight="21.0" prefWidth="204.0" text="выбранный самолет в Xml" />
+            <Label layoutX="217.0" layoutY="198.0" prefHeight="25.0" prefWidth="183.0" text="все в XML" />
+            <Button fx:id="adplan" layoutX="10.0" layoutY="235.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="190.0" text="Создать" AnchorPane.leftAnchor="10.0" />
+            <Label layoutX="213.0" layoutY="241.0" prefHeight="21.0" prefWidth="183.0" text="добавить самолет" />
+            <Label alignment="TOP_CENTER" layoutX="45.0" prefHeight="21.0" prefWidth="436.0" styleClass="label-header" text="Аэропорт" />
          </children></AnchorPane>
    </children>
    <columnConstraints>
